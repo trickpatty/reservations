@@ -22,6 +22,7 @@
     $('#datePicker').datepicker({
         autoclose: true,
         assumeNearbyYear: true,
+        disableTouchKeyboard: true,
         format: 'm/d/yy',
         startDate: '-0d',
         todayBtn: 'linked',
@@ -32,7 +33,8 @@
     $('#timePicker').timepicker({
         snapToStep: true,
         minuteStep: 15,
-        showInputs: false
+        showInputs: false,
+        disableFocus: true
     });
     $('#timePicker').focus(function () { $('#timePicker').timepicker('showWidget'); });
 
