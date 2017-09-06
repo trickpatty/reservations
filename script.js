@@ -128,9 +128,10 @@ function fulfillReservation(reservationId) {
             reservationsObject[i].fulfilled = true;
             saveAllReservations(reservationsObject);
             refreshTableFromStorage(reservationsObject[i].id);
-            return true;
+            return false;
         }
     }
+    return false;
 }
 
 $('#deleteModal').on('show.bs.modal', function (event) {
@@ -147,7 +148,8 @@ function deleteReservation(reservationId) {
             reservationsObject.splice(reservationsObject.indexOf(reservationsObject[i]), 1)
             saveAllReservations(reservationsObject);
             refreshTableFromStorage();
-            return true;
+            return false;
         }
     }
+    return false;
 }
