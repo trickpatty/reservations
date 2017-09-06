@@ -62,7 +62,6 @@
     border-bottom-right-radius: 4px;
   }
   .input-group-btn-vertical i{
-    /* position: absolute; */
     top: 0;
     left: 2px;
   }
@@ -92,10 +91,6 @@
         clear: inherit;
     }
 }
-/* 
-#partyNameHeader {
-    width: 50%;
-} */
 
 table tr td:last-child {
     width: 15em;

@@ -41,13 +41,7 @@
     $('form').validator().on('submit', function (e) {
         if (!e.isDefaultPrevented()) {
             e.preventDefault();
-            // var reservationsObjectString = localStorage.getItem('reservations');
-            // var reservationsObject = JSON.parse(reservationsObjectString);
             var reservationsObject = loadReservations();
-            // if (!reservationsObject) {
-            //     reservationsObject = new Array();
-            // }
-            // console.log('reservationsObject: ', reservationsObject);
             var newReservation = {
                 id: Date.now(),
                 partySize: $("#partySize").val(),
@@ -56,10 +50,6 @@
                 reservationDate: $("#datePicker").val(),
                 fulfilled: false
             };
-            // console.log('newReservation: ', newReservation);
-            // var newReservationArray = reservationsObject.push(newReservation);
-            // console.log('newReservationArray: ', newReservationArray);
-            // localStorage.setItem('reservations', JSON.stringify(reservationsObject));
             saveReservation(newReservation);
             refreshTableFromStorage();
 
@@ -95,8 +85,6 @@ function saveAllReservations(reservationsObject){
 }
 
 function refreshTableFromStorage(justUpdated) {
-    // var reservationsObjectString = localStorage.getItem('reservations');
-    // var reservationsObject = JSON.parse(reservationsObjectString);
     var reservationsObject = loadReservations();
     
     var tbody = $('table tbody'),
