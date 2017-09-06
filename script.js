@@ -53,9 +53,10 @@
             saveReservation(newReservation);
             refreshTableFromStorage();
 
+            var curTime = new Date();
             $('#partySize').val('1');
             $('#partyName').val('');
-            $('#timepicker').timepicker('setTime', new Date());
+            $('#timePicker').timepicker('setTime', curTime.toTimeString());
             $('#datePicker').datepicker('update', 'now');
 
             return false;
