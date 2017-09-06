@@ -31,27 +31,27 @@
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
                     aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button>
+                </button> -->
                 <a class="navbar-brand" href="#">Reservations</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Settings <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Clear all reservations</a></li>
+                            <li><a href="#" id="clearAllReservations">Clear all reservations</a></li>
                         </ul>
                     </li>
                 </ul>
-            </div>
+            </div> -->
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
@@ -75,7 +75,8 @@
                                     </div>
                                     <div class="col-md-8">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="partyName" id="partyName" placeholder="Party Name" data-error="Please enter a name for this party" required="required">
+                                            <input type="text" class="form-control" name="partyName" id="partyName" placeholder="Party Name" data-error="Please enter a name for this party"
+                                                required="required">
                                             <div class="help-block with-errors"></div>
                                         </div>
                                         <div class="form-group">
@@ -105,15 +106,18 @@
             <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <table class="table table-hover table-striped">
-                            <thead>
-                                <th>Party Size</th>
-                                <th>Party Name</th>
-                                <th>Reservation Time</th>
-                                <th>Reservation Date</th>
-                            </thead>
-                            <tbody></tbody>
-                        </table>
+                        <div class="table-responsive">
+                            <table class="table table-hover table-striped">
+                                <thead>
+                                    <th>Party Size</th>
+                                    <th id="partyNameHeader">Party Name</th>
+                                    <th>Reservation Time</th>
+                                    <th>Reservation Date</th>
+                                    <th>Actions</th>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -92,3 +92,38 @@
         clear: inherit;
     }
 }
+/* 
+#partyNameHeader {
+    width: 50%;
+} */
+
+table tr td:last-child {
+    width: 15em;
+}
+
+table tr td:last-child a:first-child {
+    margin-right: 1em;
+}
+
+@-webkit-keyframes updated {
+    from { background-color: white; }
+    to { background-color: inherit; }
+  }
+  @-moz-keyframes updated {
+    from { background-color: white; }
+    to { background-color: inherit; }
+  }
+  @-o-keyframes updated {
+    from { background-color: white; }
+    to { background-color: inherit; }
+  }
+  @keyframes updated {
+    from { background-color: white; }
+    to { background-color: inherit; }
+  }
+  .updated {
+    -webkit-animation: updated 1s ; /* Safari 4+ */
+    -moz-animation:    updated 1s ; /* Fx 5+ */
+    -o-animation:      updated 1s ; /* Opera 12+ */
+    animation:         updated 1s ; /* IE 10+ */
+  }
