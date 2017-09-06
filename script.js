@@ -106,7 +106,7 @@ function refreshTableFromStorage(justUpdated) {
         });
         var td = $('<td>');
         if (!reservation['fulfilled']) {
-            $('<a>').attr('href', 'javascript:fulfillReservation("' + reservation['id'] + '");').attr('class', 'btn btn-large btn-success').html('Check In').appendTo(td);
+            $('<a>').attr('href', 'javascript:return fulfillReservation("' + reservation['id'] + '");').attr('class', 'btn btn-large btn-success').html('Check In').appendTo(td);
         }
         $('<a>').attr('href', '#')
             .attr('class', 'btn btn-large btn-danger')
